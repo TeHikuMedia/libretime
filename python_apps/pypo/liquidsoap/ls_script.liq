@@ -41,7 +41,7 @@ source_id = ref 0
 
 def check_version(~version=liquidsoap.version, major, minor) =
     v = list.map(int_of_string, string.split(separator="\.", version))
-    list.nth(v,0,default=0) > major or list.nth(v,0,default=0) == major and list.nth(v,1,default=0) >= minor
+    list.nth(default=0,v,0) > major or list.nth(default=0,v,0) == major and list.nth(default=0,v,1) >= minor
 end
 
 # cue cut fix for liquidsoap <1.2.2
