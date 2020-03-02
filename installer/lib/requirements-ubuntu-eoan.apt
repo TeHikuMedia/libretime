@@ -53,6 +53,8 @@ vorbis-tools
 pwgen
 libfaad2
 php-apcu
+libfdkaac-ocaml-dev
+libfaad-ocaml-dev
 
 lame
 
