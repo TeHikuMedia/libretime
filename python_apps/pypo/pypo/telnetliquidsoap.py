@@ -142,7 +142,6 @@ class TelnetLiquidsoap:
             self.logger.debug(tn.read_all().decode('utf-8'))
 
         except Exception as e:
-            self.logger.error(str(e))
             self.logger.error(traceback.format_exc())
         finally:
             self.telnet_lock.release()
@@ -162,7 +161,6 @@ class TelnetLiquidsoap:
             self.logger.debug(tn.read_all().decode('utf-8'))
 
         except Exception as e:
-            self.logger.error(str(e))
             self.logger.error(traceback.format_exc())
         finally:
             self.telnet_lock.release()
@@ -186,7 +184,6 @@ class TelnetLiquidsoap:
 
             self.current_prebuffering_stream_id = None
         except Exception as e:
-            self.logger.error(str(e))
             self.logger.error(traceback.format_exc())
         finally:
             self.telnet_lock.release()
@@ -210,7 +207,6 @@ class TelnetLiquidsoap:
 
             self.current_prebuffering_stream_id = media_item['row_id']
         except Exception as e:
-            self.logger.error(str(e))
             self.logger.error(traceback.format_exc())
         finally:
             self.telnet_lock.release()
@@ -272,7 +268,6 @@ class TelnetLiquidsoap:
             tn.write('exit\n'.encode('utf-8'))
             tn.read_all().decode('utf-8')
         except Exception as e:
-            self.logger.error(str(e))
             self.logger.error(traceback.format_exc())
         finally:
             self.telnet_lock.release()
