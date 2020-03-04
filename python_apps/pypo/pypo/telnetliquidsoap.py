@@ -1,6 +1,7 @@
 
 import telnetlib
 from .timeout import ls_timeout
+import traceback
 
 def create_liquidsoap_annotation(media):
     # We need liq_start_next value in the annotate. That is the value that controls overlap duration of crossfade.
@@ -142,6 +143,7 @@ class TelnetLiquidsoap:
 
         except Exception as e:
             self.logger.error(str(e))
+            self.logger.error(traceback.format_exc())
         finally:
             self.telnet_lock.release()
 
@@ -161,6 +163,7 @@ class TelnetLiquidsoap:
 
         except Exception as e:
             self.logger.error(str(e))
+            self.logger.error(traceback.format_exc())
         finally:
             self.telnet_lock.release()
 
@@ -184,6 +187,7 @@ class TelnetLiquidsoap:
             self.current_prebuffering_stream_id = None
         except Exception as e:
             self.logger.error(str(e))
+            self.logger.error(traceback.format_exc())
         finally:
             self.telnet_lock.release()
 
@@ -207,6 +211,7 @@ class TelnetLiquidsoap:
             self.current_prebuffering_stream_id = media_item['row_id']
         except Exception as e:
             self.logger.error(str(e))
+            self.logger.error(traceback.format_exc())
         finally:
             self.telnet_lock.release()
 
@@ -227,6 +232,7 @@ class TelnetLiquidsoap:
             return stream_id
         except Exception as e:
             self.logger.error(str(e))
+            self.logger.error(traceback.format_exc())
         finally:
             self.telnet_lock.release()
 
@@ -259,12 +265,19 @@ class TelnetLiquidsoap:
             tn = telnetlib.Telnet(self.ls_host, self.ls_port)
             for i in commands:
                 self.logger.info(i)
+<<<<<<< HEAD
                 tn.write(i.encode('utf-8'))
+=======
+                if type(i) is str:
+                    i = i.encode('utf-8')
+                tn.write(i)
+>>>>>>> 187839c2008a8fd140bb60147813781f75ea6d01
 
             tn.write('exit\n'.encode('utf-8'))
             tn.read_all().decode('utf-8')
         except Exception as e:
             self.logger.error(str(e))
+            self.logger.error(traceback.format_exc())
         finally:
             self.telnet_lock.release()
 
