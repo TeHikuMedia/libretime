@@ -156,18 +156,22 @@ def watch (dir_id, directory):
               logging.warning("Problematic file: {}".format(database["filepath"]))
           elif counter >= 1:
 
-
-
             logging.info("--> Existing audio: "+database["filepath"])
             logging.info("--> MTIME: {0}".format(row))
             logging.info("--> MTIME: {0}".format(row['mtime']))
-            logging.info("--> MTIME: {0}".format(database['mtime']))
+            logging.info("--> MTIME: {0}".format(os.path.getmtime(curFilePath)))
+            logging.info("--> MTIME: {0} ?> {1} : {2}".format(
+              os.path.getmtime(curFilePath),
+              row['mtime'],
+              os.path.getmtime(curFilePath) > row['mtime'],
+            ))
+
             try:
               fdate = row['mtime']
             except:
               logging.warning("Cen't get datetime from database: {0}".format(row))
-              fdate = None
-            logging.info("--> Check Dates: {0}<>{1}".format(fdate, database['mtime']))
+              fdate = 0 # Force metadata update if mtime not in database.
+
             try:
               query = "SELECT mtime from cc_files WHERE filepath = %s AND directory = %s"
               cur.execute(query, (database["filepath"], database["directory"]))
