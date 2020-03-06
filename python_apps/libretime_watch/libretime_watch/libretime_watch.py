@@ -134,8 +134,9 @@ def watch (dir_id, directory):
           try:
             query = "SELECT * FROM cc_files WHERE filepath = %s AND directory = %s"
             cur.execute(query, (database["filepath"], database["directory"]))            
-          except: 
-            logging.warning ("I can't SELECT * ... from cc_files")
+          except Exception as e: 
+            logging.warning("I can't SELECT * ... from cc_files")
+            logging.warning(e)
             logging.info ("Skipping: {}".format(curFilePath))
             continue
           # There should only bbe 1 of these in the database
