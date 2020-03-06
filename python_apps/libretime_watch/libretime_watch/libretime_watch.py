@@ -14,6 +14,7 @@ import subprocess
 import sys
 import time
 import types
+import traceback
 
 import readconfig as airtime
 import metadata as airtime_md
@@ -157,13 +158,19 @@ def watch (dir_id, directory):
               logging.warning ("I can't SELECT mtime ... from cc_files")
               continue
             row = cur.fetchone()
+            logging.info(row)
             fdate = row[0].strftime("%Y-%m-%d %H:%M:%S")
             # update needs only called, if new since last run
             logging.info("--> Check Dates: {0}<>{1}".format(fdate, database['mtime']))
-            old_mtime = time.strptime(fdate, "%Y-%m-%d %H:%M:%S")
-            new_mtime = time.strptime(database['mime'], "%Y-%m-%d %H:%M:%S")
-            logging.info("--> Check Dates: {0} <? {1} : {2}".format(
-              fdate, database['mtime'], old_mtime < new_mtime))
+            
+            try:
+              old_mtime = time.strptime(fdate, "%Y-%m-%d %H:%M:%S")
+              new_mtime = time.strptime(database['mime'], "%Y-%m-%d %H:%M:%S")
+              logging.info("--> Check Dates: {0} <? {1} : {2}".format(
+                fdate, database['mtime'], old_mtime < new_mtime))
+            except Exception as e:
+              logging.warning(e)
+              continue
 
             if old_mtime < new_mtime:
               logging.info('--> Updating...')
