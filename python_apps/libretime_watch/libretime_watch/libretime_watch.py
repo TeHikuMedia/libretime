@@ -160,10 +160,10 @@ def watch (dir_id, directory):
 
             logging.info("--> Existing audio: "+database["filepath"])
             logging.info("--> MTIME: {0}".format(row))
-            logging.info("--> MTIME: {0}".format(row[4]))
+            logging.info("--> MTIME: {0}".format(row['mtime']))
             logging.info("--> MTIME: {0}".format(database['mtime']))
             try:
-              fdate = row[4]
+              fdate = row['mtime']
             except:
               logging.warning("Cen't get datetime from database: {0}".format(row))
               fdate = None
