@@ -132,21 +132,14 @@ def watch (dir_id, directory):
 
           cur = conn.cursor()
           try:
-            query = "SELECT * FROM cc_files WHERE filepath = %s AND directory = %s"
+            query = "SELECT count(*) FROM cc_files WHERE filepath = %s AND directory = %s"
             cur.execute(query, (database["filepath"], database["directory"]))            
-          except Exception as e: 
-            logging.warning("I can't SELECT * ... from cc_files")
-            logging.warning(e)
+          except: 
+            logging.warning ("I can't SELECT count(*) ... from cc_files")
             logging.info ("Skipping: {}".format(curFilePath))
             continue
-          # There should only bbe 1 of these in the database
-          rows = cur.fetchall()
-          logging.info('Found {0} results in DB'.format(len(rows)))
-          if len(rows) > 1:
-            logging.warning('DUPLICATED IN DATABASE: {0}/{1}'.format(database["filepath"], database["directory"]))
-
-          row = rows[0]
-          counter = len(rows)
+          row = cur.fetchone()
+          counter = row[0]
           if counter == 0:
             # new file
             logging.info("--> New audio: "+database["filepath"])
@@ -156,9 +149,7 @@ def watch (dir_id, directory):
             else:
               logging.warning("Problematic file: {}".format(database["filepath"]))
           elif counter >= 1:
-
             logging.info("--> Existing audio: "+database["filepath"])
-
             try:
               query = "SELECT mtime from cc_files WHERE filepath = %s AND directory = %s"
               cur.execute(query, (database["filepath"], database["directory"]))
