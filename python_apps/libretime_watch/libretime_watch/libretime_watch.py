@@ -37,7 +37,7 @@ config = {}
 
 logging.basicConfig(format='%(asctime)s [%(levelname)s]: %(message)s',filename=logfile,level=logging.INFO)
 
-def update_database (conn):
+def update_database(conn, cc_file_id):
   """Update database dictionary to cc_files
   """
   cur = conn.cursor()
@@ -50,8 +50,8 @@ def update_database (conn):
   vals_str_list = ["%s"] * len(vals)
   vals_str = ", ".join(vals_str_list)
   try:
-    cur.execute ("UPDATE cc_files set ({cols}) = ({vals_str}) where directory = {dir} and filepath =\"{file}\""
-       .format( cols = cols_str, vals_str = vals_str, dir = database["directory"], file = database["filepath"].encode("string_escape") ), vals)
+    cur.execute ("UPDATE cc_files set ({cols}) = ({vals_str}) where id = {cc_file_id}"
+       .format( cols = cols_str, vals_str = vals_str, cc_file_id = cc_file_id), vals)
   except psycopg2.Error as e:
     logging.error("Database error: {}".format(e.pgerror))
   else:
@@ -174,7 +174,8 @@ def watch (dir_id, directory):
             row = cur.fetchone()
             logging.info(row)
             fdate = row[0] #.strftime("%Y-%m-%d %H:%M:%S")
-            file_ids.remove(row[1])
+            cc_file_id = row[1]
+            file_ids.remove(cc_file_id)
 
             # update needs only called, if new since last run
             # old_mtime = time.strptime(fdate, "%Y-%m-%d %H:%M:%S")
@@ -185,7 +186,7 @@ def watch (dir_id, directory):
               try:
                 if airtime_md.analyse_file(curFilePath,database):
                   try:
-                    update_database(conn)
+                    update_database(conn, cc_file_id)
                   except Exception as e:
                     logging.error("Could not save data for {0}".format(database["filepath"]))
                     logging.error(e)
