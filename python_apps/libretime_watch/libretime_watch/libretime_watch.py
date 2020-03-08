@@ -51,7 +51,7 @@ def update_database (conn):
   vals_str = ", ".join(vals_str_list)
   try:
     cur.execute ("UPDATE cc_files set ({cols}) = ({vals_str}) where directory = {dir} and filepath =\"{file}\""
-       .format( cols = cols_str, vals_str = vals_str, dir = database["directory"], file = database["filepath"] ), vals)
+       .format( cols = cols_str, vals_str = vals_str, dir = database["directory"], file = database["filepath"].encode("string_escape") ), vals)
   except psycopg2.Error as e:
     logging.error("Database error: {}".format(e.pgerror))
   else:
@@ -251,7 +251,7 @@ def connect_to_messaging_server():
 def msg_received_callback (channel, method, properties,body):
   '''Message reader'''
   try:
-    msg_dict = json.loads(body)
+    msg_dict = json.loggingads(body)
     api_key         = msg_dict["api_key"]
     #callback_url    = msg_dict["callback_url"]
 
