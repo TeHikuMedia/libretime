@@ -182,11 +182,17 @@ def watch (dir_id, directory):
               if airtime_md.analyse_file (curFilePath,database):
                 update_database (conn)
 
+    ## TODO ##
+    ## Need to remove these properly e.g. if there are schedules that use the file!
     logging.info("Found {0} files not in {1}".format(len(file_ids), directory))
     for file_id in file_ids:
-      logging.info('Removing file ID {0}'.format(file_id))
-      query = "DELETE FROM cc_files WHERE id = %s"
-      cur.execute(query, (file_id,))
+      cur = conn.cursor()
+      try:
+        logging.info('Removing file ID {0}'.format(file_id))
+        query = "DELETE FROM cc_files WHERE id = %s"
+        cur.execute(query, (file_id,))
+      except Exception as e:
+        logging.error(e)
     conn.commit()
 
     # close database session
