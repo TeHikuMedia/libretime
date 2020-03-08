@@ -173,12 +173,11 @@ def watch (dir_id, directory):
               continue
             row = cur.fetchone()
             logging.info(row)
-            fdate = row[0] #.strftime("%Y-%m-%d %H:%M:%S")
+            fdate = row[0]
             cc_file_id = row[1]
             file_ids.remove(cc_file_id)
 
             # update needs only called, if new since last run
-            # old_mtime = time.strptime(fdate, "%Y-%m-%d %H:%M:%S")
             new_mtime = datetime.datetime.strptime(database['mtime'], "%Y-%m-%d %H:%M:%S")
             if fdate < new_mtime:
               logging.info('--> Updating: {0}'.format(database["filepath"]))
@@ -196,7 +195,7 @@ def watch (dir_id, directory):
                 logging.error(e)
                 logging.error(traceback.format_exc())
             else:
-              logging.info('--> No update required for {0}'.format(database["filepath"]))
+              logging.info('No update required for {0}'.format(database["filepath"]))
 
     ## TODO ##
     ## Need to remove these properly e.g. if there are schedules that use the file!
