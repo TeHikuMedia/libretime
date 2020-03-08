@@ -50,7 +50,7 @@ def update_database (conn):
   vals_str_list = ["%s"] * len(vals)
   vals_str = ", ".join(vals_str_list)
   try:
-    cur.execute ("UPDATE cc_files set ({cols}) = ({vals_str}) where directory = {dir} and filepath ='{file}'"
+    cur.execute ("UPDATE cc_files set ({cols}) = ({vals_str}) where directory = {dir} and filepath =\"{file}\""
        .format( cols = cols_str, vals_str = vals_str, dir = database["directory"], file = database["filepath"] ), vals)
   except psycopg2.Error as e:
     logging.error("Database error: {}".format(e.pgerror))
