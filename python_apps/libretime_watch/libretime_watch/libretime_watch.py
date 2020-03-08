@@ -192,6 +192,8 @@ def watch (dir_id, directory):
                 logging.error("Could not analyse {0}".format(filename))
                 logging.error(e)
                 logging.error(traceback.format_exc())
+            else:
+              logging.info('--> No update required for {0}'.format(filename))
 
     ## TODO ##
     ## Need to remove these properly e.g. if there are schedules that use the file!
