@@ -185,15 +185,15 @@ def watch (dir_id, directory):
                   try:
                     update_database(conn)
                   except Exception as e:
-                    logging.error("Could not save data for {0}".format(filename))
+                    logging.error("Could not save data for {0}".format(database["filepath"]))
                     logging.error(e)
                     logging.error(traceback.format_exc())
               except Exception as e:
-                logging.error("Could not analyse {0}".format(filename))
+                logging.error("Could not analyse {0}".format(database["filepath"]))
                 logging.error(e)
                 logging.error(traceback.format_exc())
             else:
-              logging.info('--> No update required for {0}'.format(filename))
+              logging.info('--> No update required for {0}'.format(database["filepath"]))
 
     ## TODO ##
     ## Need to remove these properly e.g. if there are schedules that use the file!
