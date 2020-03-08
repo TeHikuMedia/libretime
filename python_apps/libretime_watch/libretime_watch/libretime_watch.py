@@ -128,6 +128,7 @@ def watch (dir_id, directory):
     logging.info("{0} files found in DB in {1}:{2}".format(len(watched_files_id), dir_id, directory))
     file_ids = set(i[0] for i in watched_files_id)
     logging.info("IDs: {0}".format(file_ids))
+    cur.close()
 
     # so now scan all directories
     for curroot, dirs, files in os.walk(watch_dir):
@@ -149,6 +150,7 @@ def watch (dir_id, directory):
             logging.warning("I can't SELECT * ... from cc_files")
             logging.warning(e)
             logging.info ("Skipping: {}".format(curFilePath))
+            cur.close()
             continue
           counter = len(cur.fetchall())
           # row = cur.fetchone()
@@ -158,7 +160,7 @@ def watch (dir_id, directory):
             logging.info("--> New audio: "+database["filepath"])
             database["utime"] = datetime.datetime.now()
             if airtime_md.analyse_file (curFilePath,database):
-              insert_database (conn)
+              insert_database(conn)
             else:
               logging.warning("Problematic file: {}".format(database["filepath"]))
           elif counter >= 1:
@@ -206,7 +208,15 @@ def watch (dir_id, directory):
         cur.execute(query, (file_id,))
       except Exception as e:
         logging.error(e)
-    conn.commit()
+      finally:
+        cur.lose()
+
+    try:
+      conn.commit()
+    except Exception as e:
+      logging.error("Could not commit DELETEs {0}".format(file_ids))
+      logging.error(e)
+      logging.error(traceback.format_exc())
 
     # close database session
     conn.close() 
