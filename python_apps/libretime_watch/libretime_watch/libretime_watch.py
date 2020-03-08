@@ -209,7 +209,7 @@ def watch (dir_id, directory):
       except Exception as e:
         logging.error(e)
       finally:
-        cur.lose()
+        cur.close()
 
     try:
       conn.commit()
