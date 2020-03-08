@@ -263,6 +263,7 @@ def msg_received_callback (channel, method, properties,body):
     #storage_backend = msg_dict["storage_backend"]
   except Exception as e:
     logging.error("No JSON received: "+body+ str(e))
+    return
 
   if "rescan_watch" in msg_dict["cmd"]: 
        # now call the watching routine 
