@@ -175,12 +175,12 @@ def watch (dir_id, directory):
             file_ids.remove(row[1])
 
             # update needs only called, if new since last run
-            # old_mtime = time.strptime("%Y-%m-%d %H:%M:%S", fdate)
-            new_mtime = time.strptime("%Y-%m-%d %H:%M:%S", database['mime'])
+            # old_mtime = time.strptime(fdate, "%Y-%m-%d %H:%M:%S")
+            new_mtime = time.strptime(database['mime'], "%Y-%m-%d %H:%M:%S")
             if fdate < new_mtime:
               logging.info('--> Updating: {0}'.format(database["filepath"]))
               database["utime"] = datetime.datetime.now()
-              if airtime_md.analyse_file (curFilePath,database):
+              if airtime_md.analyse_file(curFilePath,database):
                 update_database (conn)
 
     ## TODO ##
