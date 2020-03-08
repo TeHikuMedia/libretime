@@ -181,7 +181,12 @@ def watch (dir_id, directory):
               logging.info('--> Updating: {0}'.format(database["filepath"]))
               database["utime"] = datetime.datetime.now()
               if airtime_md.analyse_file(curFilePath,database):
-                update_database (conn)
+                try:
+                  update_database(conn)
+                except Exception as e:
+                  logging.error("Could not save data for {0}".format(filename))
+                  logging.error(e)
+                  logging.error(traceback.format_exc())
 
     ## TODO ##
     ## Need to remove these properly e.g. if there are schedules that use the file!
