@@ -171,13 +171,13 @@ def watch (dir_id, directory):
               continue
             row = cur.fetchone()
             logging.info(row)
-            fdate = row[0].strftime("%Y-%m-%d %H:%M:%S")
+            fdate = row[0] #.strftime("%Y-%m-%d %H:%M:%S")
             file_ids.remove(row[1])
 
             # update needs only called, if new since last run
-            old_mtime = time.strptime("%Y-%m-%d %H:%M:%S", fdate)
+            # old_mtime = time.strptime("%Y-%m-%d %H:%M:%S", fdate)
             new_mtime = time.strptime("%Y-%m-%d %H:%M:%S", database['mime'])
-            if old_mtime < new_mtime:
+            if fdate < new_mtime:
               logging.info('--> Updating: {0}'.format(database["filepath"]))
               database["utime"] = datetime.datetime.now()
               if airtime_md.analyse_file (curFilePath,database):
