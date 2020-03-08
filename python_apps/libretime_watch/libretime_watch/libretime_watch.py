@@ -252,7 +252,7 @@ def connect_to_messaging_server():
 def msg_received_callback (channel, method, properties,body):
   '''Message reader'''
   try:
-    msg_dict = json.loggingads(body)
+    msg_dict = json.loads(body)
     api_key         = msg_dict["api_key"]
     #callback_url    = msg_dict["callback_url"]
 
