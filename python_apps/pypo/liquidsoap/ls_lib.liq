@@ -233,6 +233,7 @@ def clear_queue(s)
 end
 
 def set_dynamic_source_id(id) =
+    log(id)
     current_dyn_id := id 
     string_of(!current_dyn_id)
 end
