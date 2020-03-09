@@ -203,6 +203,7 @@ class TelnetLiquidsoap:
 
             msg = 'http.restart %s\n' % media_item['uri'].encode('utf-8')
             self.logger.debug(msg)
+            self.logger.info(msg)
             tn.write(msg.encode('utf-8'))
 
             tn.write("exit\n".encode('utf-8'))
