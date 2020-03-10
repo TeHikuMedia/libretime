@@ -23,7 +23,7 @@ default_dj_fade = ref 0.
 station_name = ref ''
 show_name = ref ''
 
-dynamic_metadata_callback = ref fun (s) -> begin () end
+dynamic_metadata_callback = ref fun (~new_track, s) -> begin () end
 
 s1_connected = ref ''
 s2_connected = ref ''
@@ -181,7 +181,13 @@ ref_off_air_meta = ref off_air_meta
 if !ref_off_air_meta == "" then
     ref_off_air_meta := "LibreTime - offline"
 end
-default = rewrite_metadata([("title", !ref_off_air_meta)], default)
+
+
+def offairmeta(m) =
+    [("title", !ref_off_air_meta)]
+end
+
+default = map_metadata(offairmeta, default)
 ignore(output.dummy(default, fallible=true))
 
 master_dj_enabled = ref false
