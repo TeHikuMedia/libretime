@@ -52,7 +52,7 @@ def crossfade_airtime(s)
   s = fade.in(type="log", duration=0., s)
   s = fade.out(type="log", duration=0., s)
   fader = fun (a,b) -> add(normalize=false,[b,a])
-  crossfade(s)
+  crossfade(default=fader,s)
 end
 
 def transition(a,b) =
@@ -345,7 +345,7 @@ def cross_http(~debug=true,~http_input_id,source)
   end
 
   # Setting conservative=true would mess with the delayed switch below
-  cross(duration=cross_d,conservative=false,crosser,source)
+  crossfade(default=crosser,conservative=false,source)
 
 end
 
