@@ -52,7 +52,7 @@ def crossfade_airtime(s)
   s = fade.in(type="log", duration=0., s)
   s = fade.out(type="log", duration=0., s)
   fader = fun (a,b) -> add(normalize=false,[b,a])
-  cross(fader,s)
+  crossfade(s)
 end
 
 def transition(a,b) =
