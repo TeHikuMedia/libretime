@@ -23,7 +23,7 @@ default_dj_fade = ref 0.
 station_name = ref ''
 show_name = ref ''
 
-dynamic_metadata_callback = ref fun (~new_track, s) -> begin () end
+dynamic_metadata_callback = ref fun (~new_track=false, s) -> begin () end
 
 s1_connected = ref ''
 s2_connected = ref ''
