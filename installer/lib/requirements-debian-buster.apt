@@ -54,6 +54,8 @@ systemd-sysv
 unzip
 vorbisgain
 vorbis-tools
-vorbis-tools
 xmlstarlet
 zip
+
+bpm-tools
+ffmpeg
