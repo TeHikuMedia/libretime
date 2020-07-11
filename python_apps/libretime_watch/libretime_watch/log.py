@@ -1,5 +1,6 @@
 #!/usr/bin/python
 import logging
+import logging.handlers
 
 def setup(log_file, level=logging.INFO):
     log_handler = logging.handlers.RotatingFileHandler(log_file, mode='a', maxBytes=512, backupCount=5)
