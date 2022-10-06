@@ -1338,7 +1338,7 @@
         },
         {
             "name": "zf1s/zend-file",
-            "version": "1.14.0",
+            "version": "1.15.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zf1s/zend-file.git",
@@ -1383,7 +1383,7 @@
                 "zend"
             ],
             "support": {
-                "source": "https://github.com/zf1s/zend-file/tree/1.14.0"
+                "source": "https://github.com/zf1s/zend-file/tree/1.15.0"
             },
             "time": "2021-10-01T14:41:55+00:00"
         },
@@ -4209,5 +4209,5 @@
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "2.2.0"
+    "plugin-api-version": "2.3.0"
 }
