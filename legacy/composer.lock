@@ -1338,16 +1338,16 @@
         },
         {
             "name": "zf1s/zend-file",
-            "version": "1.14.0",
+            "version": "1.15.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zf1s/zend-file.git",
-                "reference": "b60f271a7b2f4e6807e96a367ea2d4ddbc759cd0"
+                "reference": "f9439a7e9a4548ecfb0d4ab58c9c65e446624a70"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zf1s/zend-file/zipball/b60f271a7b2f4e6807e96a367ea2d4ddbc759cd0",
-                "reference": "b60f271a7b2f4e6807e96a367ea2d4ddbc759cd0",
+                "url": "https://api.github.com/repos/zf1s/zend-file/zipball/f9439a7e9a4548ecfb0d4ab58c9c65e446624a70",
+                "reference": "f9439a7e9a4548ecfb0d4ab58c9c65e446624a70",
                 "shasum": ""
             },
             "require": {
@@ -1383,9 +1383,9 @@
                 "zend"
             ],
             "support": {
-                "source": "https://github.com/zf1s/zend-file/tree/1.14.0"
+                "source": "https://github.com/zf1s/zend-file/tree/1.15.1"
             },
-            "time": "2021-10-01T14:41:55+00:00"
+            "time": "2022-12-12T15:05:04+00:00"
         },
         {
             "name": "zf1s/zend-file-transfer",
@@ -4209,5 +4209,5 @@
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "2.2.0"
+    "plugin-api-version": "2.3.0"
 }
