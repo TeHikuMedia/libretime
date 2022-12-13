@@ -960,21 +960,21 @@
         },
         {
             "name": "zf1s/zend-cache",
-            "version": "1.14.0",
+            "version": "1.15.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zf1s/zend-cache.git",
-                "reference": "be856081355b349c1624a2fbce2018121885fa75"
+                "reference": "08af10a5ae08c6853b2f692cd66c365c85cfcdf1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zf1s/zend-cache/zipball/be856081355b349c1624a2fbce2018121885fa75",
-                "reference": "be856081355b349c1624a2fbce2018121885fa75",
+                "url": "https://api.github.com/repos/zf1s/zend-cache/zipball/08af10a5ae08c6853b2f692cd66c365c85cfcdf1",
+                "reference": "08af10a5ae08c6853b2f692cd66c365c85cfcdf1",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.3",
-                "zf1s/zend-exception": "^1.14.0"
+                "zf1s/zend-exception": "^1.15.1"
             },
             "replace": {
                 "zf1/zend-cache": "^1.12"
@@ -1011,28 +1011,28 @@
             ],
             "support": {
                 "issues": "https://github.com/zf1s/zend-cache/issues",
-                "source": "https://github.com/zf1s/zend-cache/tree/1.14.0"
+                "source": "https://github.com/zf1s/zend-cache/tree/1.15.1"
             },
-            "time": "2021-10-01T14:41:55+00:00"
+            "time": "2022-12-12T15:05:04+00:00"
         },
         {
             "name": "zf1s/zend-config",
-            "version": "1.14.0",
+            "version": "1.15.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zf1s/zend-config.git",
-                "reference": "50c86560105aff37a4b3b2f7ce706c269baff0b4"
+                "reference": "daa4abe6a64f2bb6bfb582aa38087ea6e1d3af3f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zf1s/zend-config/zipball/50c86560105aff37a4b3b2f7ce706c269baff0b4",
-                "reference": "50c86560105aff37a4b3b2f7ce706c269baff0b4",
+                "url": "https://api.github.com/repos/zf1s/zend-config/zipball/daa4abe6a64f2bb6bfb582aa38087ea6e1d3af3f",
+                "reference": "daa4abe6a64f2bb6bfb582aa38087ea6e1d3af3f",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.3",
-                "zf1s/zend-exception": "^1.14.0",
-                "zf1s/zend-xml": "^1.14.0"
+                "zf1s/zend-exception": "^1.15.1",
+                "zf1s/zend-xml": "^1.15.1"
             },
             "replace": {
                 "zf1/zend-config": "^1.12"
@@ -1064,35 +1064,35 @@
                 "zend"
             ],
             "support": {
-                "source": "https://github.com/zf1s/zend-config/tree/1.14.0"
+                "source": "https://github.com/zf1s/zend-config/tree/1.15.1"
             },
-            "time": "2021-10-01T14:41:55+00:00"
+            "time": "2022-12-12T15:05:04+00:00"
         },
         {
             "name": "zf1s/zend-controller",
-            "version": "1.14.0",
+            "version": "1.15.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zf1s/zend-controller.git",
-                "reference": "2b75a35afb6cd4fbca2670e74cd23b65ed2e66a0"
+                "reference": "54572adf6115ba981d9a763a1958134cc2c9c439"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zf1s/zend-controller/zipball/2b75a35afb6cd4fbca2670e74cd23b65ed2e66a0",
-                "reference": "2b75a35afb6cd4fbca2670e74cd23b65ed2e66a0",
+                "url": "https://api.github.com/repos/zf1s/zend-controller/zipball/54572adf6115ba981d9a763a1958134cc2c9c439",
+                "reference": "54572adf6115ba981d9a763a1958134cc2c9c439",
                 "shasum": ""
             },
             "require": {
                 "ext-reflection": "*",
                 "ext-session": "*",
                 "php": ">=5.3.3",
-                "zf1s/zend-config": "^1.14.0",
-                "zf1s/zend-exception": "^1.14.0",
-                "zf1s/zend-loader": "^1.14.0",
-                "zf1s/zend-registry": "^1.14.0",
-                "zf1s/zend-uri": "^1.14.0",
-                "zf1s/zend-view": "^1.14.0",
-                "zf1s/zend-xml": "^1.14.0"
+                "zf1s/zend-config": "^1.15.1",
+                "zf1s/zend-exception": "^1.15.1",
+                "zf1s/zend-loader": "^1.15.1",
+                "zf1s/zend-registry": "^1.15.1",
+                "zf1s/zend-uri": "^1.15.1",
+                "zf1s/zend-view": "^1.15.1",
+                "zf1s/zend-xml": "^1.15.1"
             },
             "replace": {
                 "zf1/zend-controller": "^1.12"
@@ -1127,9 +1127,9 @@
                 "zend"
             ],
             "support": {
-                "source": "https://github.com/zf1s/zend-controller/tree/1.14.0"
+                "source": "https://github.com/zf1s/zend-controller/tree/1.15.1"
             },
-            "time": "2021-10-01T14:41:55+00:00"
+            "time": "2022-12-12T15:05:04+00:00"
         },
         {
             "name": "zf1s/zend-crypt",
@@ -1290,16 +1290,16 @@
         },
         {
             "name": "zf1s/zend-exception",
-            "version": "1.14.0",
+            "version": "1.15.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zf1s/zend-exception.git",
-                "reference": "fbd0dc32013cd9d05c5172d65b78dafef63f0c81"
+                "reference": "f101c1834d08d470ff0acdaf4e1482c37607e15c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zf1s/zend-exception/zipball/fbd0dc32013cd9d05c5172d65b78dafef63f0c81",
-                "reference": "fbd0dc32013cd9d05c5172d65b78dafef63f0c81",
+                "url": "https://api.github.com/repos/zf1s/zend-exception/zipball/f101c1834d08d470ff0acdaf4e1482c37607e15c",
+                "reference": "f101c1834d08d470ff0acdaf4e1482c37607e15c",
                 "shasum": ""
             },
             "require": {
@@ -1332,9 +1332,9 @@
                 "zend"
             ],
             "support": {
-                "source": "https://github.com/zf1s/zend-exception/tree/1.14.0"
+                "source": "https://github.com/zf1s/zend-exception/tree/1.15.1"
             },
-            "time": "2021-10-01T14:41:55+00:00"
+            "time": "2022-12-12T15:05:04+00:00"
         },
         {
             "name": "zf1s/zend-file",
@@ -1671,21 +1671,21 @@
         },
         {
             "name": "zf1s/zend-layout",
-            "version": "1.14.0",
+            "version": "1.15.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zf1s/zend-layout.git",
-                "reference": "8f6e9576dae22b33f4b3c54dd9d3f0b5a0760333"
+                "reference": "11bf54701b279a783dc8f482a9a42a5edf8fe0e0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zf1s/zend-layout/zipball/8f6e9576dae22b33f4b3c54dd9d3f0b5a0760333",
-                "reference": "8f6e9576dae22b33f4b3c54dd9d3f0b5a0760333",
+                "url": "https://api.github.com/repos/zf1s/zend-layout/zipball/11bf54701b279a783dc8f482a9a42a5edf8fe0e0",
+                "reference": "11bf54701b279a783dc8f482a9a42a5edf8fe0e0",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.3",
-                "zf1s/zend-exception": "^1.14.0"
+                "zf1s/zend-exception": "^1.15.1"
             },
             "replace": {
                 "zf1/zend-layout": "^1.12"
@@ -1720,27 +1720,27 @@
                 "zend"
             ],
             "support": {
-                "source": "https://github.com/zf1s/zend-layout/tree/1.14.0"
+                "source": "https://github.com/zf1s/zend-layout/tree/1.15.1"
             },
-            "time": "2021-10-01T14:41:55+00:00"
+            "time": "2022-12-12T15:05:04+00:00"
         },
         {
             "name": "zf1s/zend-loader",
-            "version": "1.14.0",
+            "version": "1.15.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zf1s/zend-loader.git",
-                "reference": "14d65396f6bb8bb977bed50b7c8323e0252436d5"
+                "reference": "766fae443104e075522d15ef48117cd1cbd6f18c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zf1s/zend-loader/zipball/14d65396f6bb8bb977bed50b7c8323e0252436d5",
-                "reference": "14d65396f6bb8bb977bed50b7c8323e0252436d5",
+                "url": "https://api.github.com/repos/zf1s/zend-loader/zipball/766fae443104e075522d15ef48117cd1cbd6f18c",
+                "reference": "766fae443104e075522d15ef48117cd1cbd6f18c",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.3",
-                "zf1s/zend-exception": "^1.14.0"
+                "zf1s/zend-exception": "^1.15.1"
             },
             "replace": {
                 "zf1/zend-loader": "^1.12"
@@ -1769,31 +1769,31 @@
                 "zend"
             ],
             "support": {
-                "source": "https://github.com/zf1s/zend-loader/tree/1.14.0"
+                "source": "https://github.com/zf1s/zend-loader/tree/1.15.1"
             },
-            "time": "2021-10-01T14:41:55+00:00"
+            "time": "2022-12-12T15:05:04+00:00"
         },
         {
             "name": "zf1s/zend-locale",
-            "version": "1.14.0",
+            "version": "1.15.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zf1s/zend-locale.git",
-                "reference": "94ccfa57748df91c40f8b075b4b334b0825abd20"
+                "reference": "6e6e185f379d30b6802f9170d652ca453fc9d11b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zf1s/zend-locale/zipball/94ccfa57748df91c40f8b075b4b334b0825abd20",
-                "reference": "94ccfa57748df91c40f8b075b4b334b0825abd20",
+                "url": "https://api.github.com/repos/zf1s/zend-locale/zipball/6e6e185f379d30b6802f9170d652ca453fc9d11b",
+                "reference": "6e6e185f379d30b6802f9170d652ca453fc9d11b",
                 "shasum": ""
             },
             "require": {
                 "ext-iconv": "*",
                 "php": ">=5.3.3",
-                "zf1s/zend-cache": "^1.14.0",
-                "zf1s/zend-exception": "^1.14.0",
-                "zf1s/zend-registry": "^1.14.0",
-                "zf1s/zend-xml": "^1.14.0"
+                "zf1s/zend-cache": "^1.15.1",
+                "zf1s/zend-exception": "^1.15.1",
+                "zf1s/zend-registry": "^1.15.1",
+                "zf1s/zend-xml": "^1.15.1"
             },
             "replace": {
                 "zf1/zend-locale": "^1.12"
@@ -1825,9 +1825,9 @@
                 "zend"
             ],
             "support": {
-                "source": "https://github.com/zf1s/zend-locale/tree/1.14.0"
+                "source": "https://github.com/zf1s/zend-locale/tree/1.15.1"
             },
-            "time": "2021-10-01T14:41:55+00:00"
+            "time": "2022-12-12T15:05:04+00:00"
         },
         {
             "name": "zf1s/zend-log",
@@ -1940,21 +1940,21 @@
         },
         {
             "name": "zf1s/zend-registry",
-            "version": "1.14.0",
+            "version": "1.15.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zf1s/zend-registry.git",
-                "reference": "b3b5d3f51710b9b2262945622cedbf287fb2673d"
+                "reference": "64201b293bde572186db03185ff6d540c370c0cd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zf1s/zend-registry/zipball/b3b5d3f51710b9b2262945622cedbf287fb2673d",
-                "reference": "b3b5d3f51710b9b2262945622cedbf287fb2673d",
+                "url": "https://api.github.com/repos/zf1s/zend-registry/zipball/64201b293bde572186db03185ff6d540c370c0cd",
+                "reference": "64201b293bde572186db03185ff6d540c370c0cd",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.3",
-                "zf1s/zend-exception": "^1.14.0"
+                "zf1s/zend-exception": "^1.15.1"
             },
             "replace": {
                 "zf1/zend-registry": "^1.12"
@@ -1986,9 +1986,9 @@
                 "zend"
             ],
             "support": {
-                "source": "https://github.com/zf1s/zend-registry/tree/1.14.0"
+                "source": "https://github.com/zf1s/zend-registry/tree/1.15.1"
             },
-            "time": "2021-10-01T14:41:55+00:00"
+            "time": "2022-12-12T15:05:04+00:00"
         },
         {
             "name": "zf1s/zend-rest",
@@ -2150,22 +2150,22 @@
         },
         {
             "name": "zf1s/zend-session",
-            "version": "1.14.0",
+            "version": "1.15.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zf1s/zend-session.git",
-                "reference": "6580432cd62f949574c829715e8585d5215a683d"
+                "reference": "6e0d8a8b2c74f6dfa3b874c9017328445c47bb4f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zf1s/zend-session/zipball/6580432cd62f949574c829715e8585d5215a683d",
-                "reference": "6580432cd62f949574c829715e8585d5215a683d",
+                "url": "https://api.github.com/repos/zf1s/zend-session/zipball/6e0d8a8b2c74f6dfa3b874c9017328445c47bb4f",
+                "reference": "6e0d8a8b2c74f6dfa3b874c9017328445c47bb4f",
                 "shasum": ""
             },
             "require": {
                 "ext-session": "*",
                 "php": ">=5.3.3",
-                "zf1s/zend-exception": "^1.14.0"
+                "zf1s/zend-exception": "^1.15.1"
             },
             "replace": {
                 "zf1/zend-session": "^1.12"
@@ -2199,31 +2199,31 @@
                 "zend"
             ],
             "support": {
-                "source": "https://github.com/zf1s/zend-session/tree/1.14.0"
+                "source": "https://github.com/zf1s/zend-session/tree/1.15.1"
             },
-            "time": "2021-10-01T14:41:55+00:00"
+            "time": "2022-12-12T15:05:04+00:00"
         },
         {
             "name": "zf1s/zend-uri",
-            "version": "1.14.0",
+            "version": "1.15.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zf1s/zend-uri.git",
-                "reference": "5db2ded7a822a0d44351047e6052cbc92b92b785"
+                "reference": "5229cfe5faadcf6a057d751deef88eb5899fdfd4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zf1s/zend-uri/zipball/5db2ded7a822a0d44351047e6052cbc92b92b785",
-                "reference": "5db2ded7a822a0d44351047e6052cbc92b92b785",
+                "url": "https://api.github.com/repos/zf1s/zend-uri/zipball/5229cfe5faadcf6a057d751deef88eb5899fdfd4",
+                "reference": "5229cfe5faadcf6a057d751deef88eb5899fdfd4",
                 "shasum": ""
             },
             "require": {
                 "ext-ctype": "*",
                 "php": ">=5.3.3",
-                "zf1s/zend-exception": "^1.14.0",
-                "zf1s/zend-loader": "^1.14.0",
-                "zf1s/zend-locale": "^1.14.0",
-                "zf1s/zend-validate": "^1.14.0"
+                "zf1s/zend-exception": "^1.15.1",
+                "zf1s/zend-loader": "^1.15.1",
+                "zf1s/zend-locale": "^1.15.1",
+                "zf1s/zend-validate": "^1.15.1"
             },
             "replace": {
                 "zf1/zend-uri": "^1.12"
@@ -2257,31 +2257,31 @@
                 "zend"
             ],
             "support": {
-                "source": "https://github.com/zf1s/zend-uri/tree/1.14.0"
+                "source": "https://github.com/zf1s/zend-uri/tree/1.15.1"
             },
-            "time": "2021-10-01T14:41:55+00:00"
+            "time": "2022-12-12T15:05:04+00:00"
         },
         {
             "name": "zf1s/zend-validate",
-            "version": "1.14.0",
+            "version": "1.15.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zf1s/zend-validate.git",
-                "reference": "11eca1cb7b4c36ad1feda4c3a7cd5215f0e8b32e"
+                "reference": "8919044abbb9422973546b189d89d9b1a4cd6172"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zf1s/zend-validate/zipball/11eca1cb7b4c36ad1feda4c3a7cd5215f0e8b32e",
-                "reference": "11eca1cb7b4c36ad1feda4c3a7cd5215f0e8b32e",
+                "url": "https://api.github.com/repos/zf1s/zend-validate/zipball/8919044abbb9422973546b189d89d9b1a4cd6172",
+                "reference": "8919044abbb9422973546b189d89d9b1a4cd6172",
                 "shasum": ""
             },
             "require": {
                 "ext-ctype": "*",
                 "ext-reflection": "*",
                 "php": ">=5.3.3",
-                "zf1s/zend-exception": "^1.14.0",
-                "zf1s/zend-loader": "^1.14.0",
-                "zf1s/zend-locale": "^1.14.0"
+                "zf1s/zend-exception": "^1.15.1",
+                "zf1s/zend-loader": "^1.15.1",
+                "zf1s/zend-locale": "^1.15.1"
             },
             "replace": {
                 "zf1/zend-validate": "^1.12"
@@ -2316,9 +2316,9 @@
             ],
             "support": {
                 "issues": "https://github.com/zf1s/zend-validate/issues",
-                "source": "https://github.com/zf1s/zend-validate/tree/1.14.0"
+                "source": "https://github.com/zf1s/zend-validate/tree/1.15.1"
             },
-            "time": "2021-10-01T14:41:55+00:00"
+            "time": "2022-12-12T15:05:04+00:00"
         },
         {
             "name": "zf1s/zend-version",
@@ -2370,26 +2370,26 @@
         },
         {
             "name": "zf1s/zend-view",
-            "version": "1.14.0",
+            "version": "1.15.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zf1s/zend-view.git",
-                "reference": "e48f103dc707486ba65ed012985158fbe49e821f"
+                "reference": "9bf45e8d0600d1ed2c1c622394fe0f9e6529d160"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zf1s/zend-view/zipball/e48f103dc707486ba65ed012985158fbe49e821f",
-                "reference": "e48f103dc707486ba65ed012985158fbe49e821f",
+                "url": "https://api.github.com/repos/zf1s/zend-view/zipball/9bf45e8d0600d1ed2c1c622394fe0f9e6529d160",
+                "reference": "9bf45e8d0600d1ed2c1c622394fe0f9e6529d160",
                 "shasum": ""
             },
             "require": {
                 "ext-reflection": "*",
                 "php": ">=5.3.3",
-                "zf1s/zend-controller": "^1.14.0",
-                "zf1s/zend-exception": "^1.14.0",
-                "zf1s/zend-loader": "^1.14.0",
-                "zf1s/zend-locale": "^1.14.0",
-                "zf1s/zend-registry": "^1.14.0"
+                "zf1s/zend-controller": "^1.15.1",
+                "zf1s/zend-exception": "^1.15.1",
+                "zf1s/zend-loader": "^1.15.1",
+                "zf1s/zend-locale": "^1.15.1",
+                "zf1s/zend-registry": "^1.15.1"
             },
             "replace": {
                 "zf1/zend-view": "^1.12"
@@ -2422,22 +2422,22 @@
                 "zend"
             ],
             "support": {
-                "source": "https://github.com/zf1s/zend-view/tree/1.14.0"
+                "source": "https://github.com/zf1s/zend-view/tree/1.15.1"
             },
-            "time": "2021-10-01T14:41:55+00:00"
+            "time": "2022-12-12T15:05:04+00:00"
         },
         {
             "name": "zf1s/zend-xml",
-            "version": "1.14.0",
+            "version": "1.15.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zf1s/zend-xml.git",
-                "reference": "15cbfb013e260e484fc8763403558a55e00bd8f6"
+                "reference": "f2680a031624a894d980105e260f2058b0c82b5e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zf1s/zend-xml/zipball/15cbfb013e260e484fc8763403558a55e00bd8f6",
-                "reference": "15cbfb013e260e484fc8763403558a55e00bd8f6",
+                "url": "https://api.github.com/repos/zf1s/zend-xml/zipball/f2680a031624a894d980105e260f2058b0c82b5e",
+                "reference": "f2680a031624a894d980105e260f2058b0c82b5e",
                 "shasum": ""
             },
             "require": {
@@ -2445,7 +2445,7 @@
                 "ext-simplexml": "*",
                 "ext-xml": "*",
                 "php": ">=5.3.3",
-                "zf1s/zend-exception": "^1.14.0"
+                "zf1s/zend-exception": "^1.15.1"
             },
             "replace": {
                 "zf1/zend-xml": "^1.12"
@@ -2474,9 +2474,9 @@
                 "zend"
             ],
             "support": {
-                "source": "https://github.com/zf1s/zend-xml/tree/1.14.0"
+                "source": "https://github.com/zf1s/zend-xml/tree/1.15.1"
             },
-            "time": "2021-10-01T14:41:55+00:00"
+            "time": "2022-12-12T15:05:04+00:00"
         }
     ],
     "packages-dev": [
@@ -4092,23 +4092,23 @@
         },
         {
             "name": "zf1s/zend-dom",
-            "version": "1.14.0",
+            "version": "1.15.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zf1s/zend-dom.git",
-                "reference": "e03fd6a03eebb438595aa24011b76f01bc93fa7f"
+                "reference": "8017273265b3cf91db3d9d81750071e94f78dd52"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zf1s/zend-dom/zipball/e03fd6a03eebb438595aa24011b76f01bc93fa7f",
-                "reference": "e03fd6a03eebb438595aa24011b76f01bc93fa7f",
+                "url": "https://api.github.com/repos/zf1s/zend-dom/zipball/8017273265b3cf91db3d9d81750071e94f78dd52",
+                "reference": "8017273265b3cf91db3d9d81750071e94f78dd52",
                 "shasum": ""
             },
             "require": {
                 "ext-dom": "*",
                 "php": ">=5.3.3",
-                "zf1s/zend-exception": "^1.14.0",
-                "zf1s/zend-xml": "^1.14.0"
+                "zf1s/zend-exception": "^1.15.1",
+                "zf1s/zend-xml": "^1.15.1"
             },
             "replace": {
                 "zf1/zend-dom": "^1.12"
@@ -4137,32 +4137,32 @@
                 "zend"
             ],
             "support": {
-                "source": "https://github.com/zf1s/zend-dom/tree/1.14.0"
+                "source": "https://github.com/zf1s/zend-dom/tree/1.15.1"
             },
-            "time": "2021-10-01T14:41:55+00:00"
+            "time": "2022-12-12T15:05:04+00:00"
         },
         {
             "name": "zf1s/zend-test",
-            "version": "1.14.0",
+            "version": "1.15.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zf1s/zend-test.git",
-                "reference": "811e2c8b910120d4450935b8953ecab9ab5e8642"
+                "reference": "9e9df9541488041886f596483eb5e2f5f692f805"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zf1s/zend-test/zipball/811e2c8b910120d4450935b8953ecab9ab5e8642",
-                "reference": "811e2c8b910120d4450935b8953ecab9ab5e8642",
+                "url": "https://api.github.com/repos/zf1s/zend-test/zipball/9e9df9541488041886f596483eb5e2f5f692f805",
+                "reference": "9e9df9541488041886f596483eb5e2f5f692f805",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.3",
-                "zf1s/zend-controller": "^1.14.0",
-                "zf1s/zend-dom": "^1.14.0",
-                "zf1s/zend-exception": "^1.14.0",
-                "zf1s/zend-layout": "^1.14.0",
-                "zf1s/zend-registry": "^1.14.0",
-                "zf1s/zend-session": "^1.14.0"
+                "zf1s/zend-controller": "^1.15.1",
+                "zf1s/zend-dom": "^1.15.1",
+                "zf1s/zend-exception": "^1.15.1",
+                "zf1s/zend-layout": "^1.15.1",
+                "zf1s/zend-registry": "^1.15.1",
+                "zf1s/zend-session": "^1.15.1"
             },
             "replace": {
                 "zf1/zend-test": "^1.12"
@@ -4194,9 +4194,9 @@
                 "zend"
             ],
             "support": {
-                "source": "https://github.com/zf1s/zend-test/tree/1.14.0"
+                "source": "https://github.com/zf1s/zend-test/tree/1.15.1"
             },
-            "time": "2021-10-01T14:41:55+00:00"
+            "time": "2022-12-12T15:05:04+00:00"
         }
     ],
     "aliases": [],
@@ -4209,5 +4209,5 @@
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "2.2.0"
+    "plugin-api-version": "2.3.0"
 }
