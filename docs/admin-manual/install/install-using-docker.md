@@ -91,7 +91,36 @@ sudo apt install gettext-base
 
 :::
 
+### Configuration file
+
 Next, edit the [configuration file](../configuration.md) at `./config.yml` to fill required information and to match your needs.
+
+:::info
+
+The `general` section requires that you set the `public_url`, `api_key`, and `secret_key` fields **before** running libretime.
+
+```yaml
+general:
+  # The public url.
+  # > this field is REQUIRED
+  public_url: "https://example.com"
+  # The internal API authentication key.
+  # > this field is REQUIRED
+  api_key: "some_random_generated_secret!"
+  # The Django API secret key.
+  # > this field is REQUIRED
+  secret_key: "some_random_generated_secret!"
+
+  # List of origins allowed to access resources on the server,
+  # the [general.public_url] origin is automatically included.
+  # > default is []
+  allowed_cors_origins: []
+```
+
+If you're just getting started, make sure you add the servers IP address to the `allowed_cors_origins` field, e.g. http://localhost:8080, otherwise you won't be able to login unless
+you're accessing libretime from your `public_url`.
+
+:::
 
 :::info
 
