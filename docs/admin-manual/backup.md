@@ -33,6 +33,12 @@ Here is an example to dump your PostgreSQL database to a plain text SQL file:
 sudo -u postgres pg_dump --no-owner --no-privileges libretime > libretime.sql
 ```
 
+Here is an example to dump your PostgreSQL database with the tar format which you can use with pg_restore:
+
+```bash
+sudo -u postgres pg_dump -F tar --no-owner --no-privileges libretime > libretime.tar
+```
+
 :::note
 
 We use the `--no-owner` and `--no-privileges` flags to ignore roles
@@ -71,8 +77,8 @@ Restore the database by using the one of the following command depending on the 
 # With a plain text SQL file
 sudo -u libretime libretime-api dbshell < libretime.sql
 
-# With a custom pg_dump format
-sudo -u postgres pg_restore --no-owner --no-privileges --dbname=libretime libretime.dump
+# With a custom pg_dump format such as tar
+sudo -u postgres pg_restore --no-owner --no-privileges --dbname=libretime libretime.tar
 ```
 
 :::info
